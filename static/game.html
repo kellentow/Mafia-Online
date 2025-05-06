@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mafia Game</title>
+  <link rel="stylesheet" href="/src/game.css" />
+</head>
+<body>
+  <div id="container">
+    <!-- Sidebar: Player List -->
+    <aside id="player-list">
+      <h2>Players</h2>
+      <ul id="players">
+        <!-- Dynamically filled -->
+      </ul>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main id="chat-area">
+      <section id="public-chat">
+        <h2>Public Chat</h2>
+        <div id="chat-box" class="chat-box"></div>
+      </section>
+
+      <section id="mafia-chat" style="display: none;">
+        <h2 style="color: red;">Mafia Chat (Night Only)</h2>
+        <div id="mafia-box" class="chat-box"></div>
+      </section>
+
+      <div id="chat-input">
+        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" />
+        <button id="send">Send</button>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="/src/game.js"></script>
+</body>
+</html>

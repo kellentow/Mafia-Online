@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mafia</title>
+  <link rel="stylesheet" href="src/index.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Mafia (WIP)</h1>
+  </header>
+
+  <main>
+    <p><strong>Mafia</strong> is a game about deceit, deduction, and teamwork.</p>
+    <p>In Mafia, there are several roles:</p>
+
+    <ul>
+      <li><strong>Mafia</strong>: The killers. Lie to and deceive your friends to eliminate them all.</li>
+      <li><strong>Innocents</strong>: Most of the players. Try to find and vote out the Mafia.
+        <ul>
+          <li><strong>Doctor</strong>: Stop one person from dying that night.</li>
+          <li><strong>Wizard</strong>: Reveal one player's role per night.</li>
+          <li><strong>Muter</strong>: Choose one person to mute for the day.</li>
+          <li><strong>Soulmates</strong>: Only two players. If one dies, the other dies too.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <input id="name_input" type="text" placeholder="Enter your name"> 
+
+    <input id="id_input" type="number" placeholder="Enter game ID">
+
+    <button id="join_button">Join</button>
+    <button id="spectate_button">Spectate</button>
+  </main>
+  <footer>
+    <p>percent done: 85%</p>
+    <p>done but untested: Doctor, Wizard, Muter</p>
+  </footer>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="src/index.js"></script>
+</body>
+
+</html>

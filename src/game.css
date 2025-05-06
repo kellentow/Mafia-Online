@@ -1,0 +1,98 @@
+/* Layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+#player-list {
+  width: 20%;
+  background-color: #222;
+  padding: 1rem;
+  border-right: 2px solid #444;
+  overflow-y: auto;
+}
+
+#player-list h2 {
+  margin-top: 0;
+}
+
+#players {
+  list-style: none;
+  padding: 0;
+}
+
+#players li {
+  padding: 0.3rem;
+  border-bottom: 1px solid #333;
+}
+
+#players li.dead {
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* Chat Area */
+#chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Chat Boxes */
+.chat-box {
+  flex: 1;
+  background-color: #1c1c1c;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+#mafia-chat .chat-box {
+  border-color: red;
+  background-color: #2b0e0e;
+  color: #f66;
+}
+
+/* Input Area */
+#chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#message {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+#send {
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#send:hover {
+  background-color: #666;
+}
+
+/* Disabled public chat at night for innocents */
+#chat-box.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

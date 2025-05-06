@@ -1,0 +1,118 @@
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #ff4757;
+  }
+  
+  /* Main Content */
+  main {
+    max-width: 800px;
+    margin: auto;
+    background-color: #2f2f44;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Paragraphs */
+  main p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* Role List Styling */
+  ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+  }
+  
+  li {
+    margin: 6px 0;
+  }
+  
+  /* Input and Button */
+  input#id_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #444;
+    color: #f0f0f0;
+  }
+
+  input#name_input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #444;
+    color: #f0f0f0;
+  }
+  
+  input#id_input::placeholder {
+    color: #aaa;
+  }
+  
+  button#join_button {
+    width: 49%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ff4757;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button#spectate_button {
+    width: 49%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ff8747;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button#join_button:hover {
+    background-color: #e84148;
+  }
+  button#spectate_button:hover {
+    background-color: #e0824f;
+  }
+  
