@@ -34,6 +34,11 @@ body {
   border-bottom: 1px solid #333;
 }
 
+#players li button{
+  padding: 0.3rem;
+  border: 1px solid #333;
+}
+
 #players li.dead {
   color: #888;
   text-decoration: line-through;

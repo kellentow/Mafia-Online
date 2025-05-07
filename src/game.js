@@ -53,7 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
     day       = data.day;
     selfAlive = data.self.alive;
     selfRole  = data.self.role;
-    selfVoted  = data.self.voted;
+    selfVoted = data.self.voted;
+    selfMuted = data.self.muted;
+    selfNonce = data.self.nonce;
 
     // render players
     playersList.innerHTML = "";
@@ -70,6 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // style mafia for mafia
       if (selfRole === "mafia" && roleFlag === true && alive) {
         li.style.color = "red";
+        li.textContent =+ " (mafia)"
+      }
+      // style for wizard
+      if (selfRole === "wizard") {
+        if (roleFlag) {
+          li.textContent =+ " ("+roleFlag+")"
+        }
+      }
+
+      if (selfNonce == nonce) {
+        li.textContent =+ " ("+selfRole+") (You)"
       }
 
       // always show action buttons if alive
@@ -139,6 +152,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!selfAlive) {
       messageInput.disabled = true;
     }
+
+    // if muted, always disable
+    if (!selfMuted) {
+      messageInput.disabled = true;
+    }
+
     // night & mafia alive
     if (!day && selfRole === "mafia" && selfAlive) {
       publicSection.style.display = "none";
